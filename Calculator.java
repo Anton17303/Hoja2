@@ -21,15 +21,15 @@ public class Calculator implements ICalculator {
     	//post: se devuelve el resultado de la operación postfix ingresada, si hay una operación no válida se retornara un valor negativo
     	try {
     		Stack<Double> stack = new StackVector<Double>(); //esta variable almacena el stack que se usará para realizar las operaciones
-    		String[] characters = expression.split("\s");
-    		for (int i=0; i<characters.length; i++) {
-    			if (Character.isDigit(characters[i].charAt(0))){
-    				stack.push(Double.valueOf(characters[i]));
+    		String[] characters = expression.split("\s"); //esta varaiable divide el string necesario para la operacion y lo divide varios strings. Para hacer la dividsión debe haber un espacio en blanco
+    		for (int i=0; i<characters.length; i++) { //Ciclo for el cuál evaluara cada elemento del array de strings
+    			if (Character.isDigit(characters[i].charAt(0))){ //Evalua si el elemento es un numero
+    				stack.push(Double.valueOf(characters[i])); //SI es un número, el elemento se agrega al stack
     			}
-    			else {
-    				Double firstNum = stack.pop();
+    			else { //Procedimiento a seguir si el elemento del array no es un número
+    				Double firstNum = stack.pop(); //Guardar el último elemento del stack y luego borrarlo
     				Double secondnumb = stack.pop();
-    				switch(characters[i]) {
+    				switch(characters[i]) { //Evaluar el signo de la operación, se harán operaciones dependiendo el signo
     					
     					case "+":
     						stack.push(firstNum+ secondnumb);
@@ -51,7 +51,7 @@ public class Calculator implements ICalculator {
     		return stack.peek(); //Devolver el valor más reciente de la lista
     	}
     	catch (Exception e){
-    		throw new ArithmeticException("Operación incorrecta");
+    		throw new ArithmeticException("Operación incorrecta"); //Indicar que hubo un error
     	}
 
     }
