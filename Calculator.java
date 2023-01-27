@@ -48,10 +48,10 @@ public class Calculator implements ICalculator {
     			}
     		}
     		this.operationCounter +=1; //Sumar 1 si se utiliza evaluate
-    		return stack.peek();
+    		return stack.peek(); //Devolver el valor más reciente de la lista
     	}
     	catch (Exception e){
-    		return -1.0;
+    		throw new ArithmeticException("Operación incorrecta");
     	}
 
     }
