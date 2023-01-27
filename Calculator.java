@@ -17,11 +17,31 @@ public class Calculator implements ICalculator {
     		this.operationCounter +=1;
     		String[] characters = expression.split("\s");
     		for (int i=0; i<characters.length; i++) {
-    			if (Character.isDigit(characters[i])){
-    				
+    			if (Character.isDigit(characters[i].charAt(0))){
+    				stack.push(Double.valueOf(characters[i]));
+    			}
+    			else {
+    				Double firstNum = stack.pop();
+    				Double secondnumb = stack.pop();
+    				switch(characters[i]) {
+    					
+    					case "+":
+    						stack.push(firstNum+ secondnumb);
+    						break;
+    					case "-":
+    						stack.push(firstNum- secondnumb);
+    						break;
+    					case "*":
+    						stack.push(firstNum* secondnumb);
+    						break;
+    					case "/":
+    						stack.push(firstNum- secondnumb);
+    						break;
+    					
+    				}
     			}
     		}
-    		return 0;
+    		return stack.peek();
     	}
     	catch (Exception e){
     		return -1.0;
