@@ -1,5 +1,9 @@
 import java.util.ArrayList;
-
+/**
+ * 
+ * @author José Anton, Alejandro Ortega, Pedro Pablo Guzmán
+ *
+ */
 public class Calculator implements ICalculator {
 
     //private Stack<Double> stack;
@@ -7,7 +11,11 @@ public class Calculator implements ICalculator {
     
 	private int operationCounter =0; //Esta variable sirve para contar las operaciones efectuadas con el métdo evaluate
 
-    @Override
+	/**
+	 * Este metodo evalua una expresión en notación postfix y devuelve el resultado de la expresión
+	 * @param expression la expresión a ser evaluada
+	 * @returns devuelve el resultado de la expresión en notación postfix
+	 */
     public double evaluate(String expression) throws ArithmeticException {
     	//pre: expression es un string el cuál representa una expresión aritmetica en notación postfiz
     	//post: se devuelve el resultado de la operación postfix ingresada, si hay una operación no válida se retornara un valor negativo
