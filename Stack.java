@@ -2,7 +2,7 @@ import java.util.EmptyStackException;
 
 /**
  * Stack
- * 
+ * @author José Anton, Alejandro Ortega, Pedro Pablo Guzmán
  * Interface que representa a un Stack.
  */
 public interface Stack<E> {
