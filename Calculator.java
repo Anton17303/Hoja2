@@ -21,8 +21,6 @@ public class Calculator implements ICalculator {
     	//post: se devuelve el resultado de la operación postfix ingresada, si hay una operación no válida se retornara un valor negativo
     	try {
     		Stack<Double> stack = new StackVector<Double>(); //esta variable almacena el stack que se usará para realizar las operaciones
- 
-    		this.operationCounter +=1; //Sumar 1 si se utiliza evaluate
     		String[] characters = expression.split("\s");
     		for (int i=0; i<characters.length; i++) {
     			if (Character.isDigit(characters[i].charAt(0))){
@@ -49,6 +47,7 @@ public class Calculator implements ICalculator {
     				}
     			}
     		}
+    		this.operationCounter +=1; //Sumar 1 si se utiliza evaluate
     		return stack.peek();
     	}
     	catch (Exception e){
