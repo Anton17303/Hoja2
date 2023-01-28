@@ -39,11 +39,24 @@ public class Main {
                     for (String expression : expressions) {
                         // TODO: Evaluar las lineas para ver si son operaciones validas
                         System.out.println(expression);
+			    if (Character.isNumeric((expression.charAt(0))) && 
+                            Character.isNumeric((expression.charAt(expression.length() - 1)))) {   
+                             return true;  
+                                }
+
+                    return false; }
+                        
                     }
                     break;
                 case "2":   // Mostrar el ultimo resultado calculado
                     // TODO: Comprobar si existe un resultado previo valido y si existe, imprimirlo
                     double lastResult = calculator.getPrevious();
+		if (Character.isNumeric((lastResult.charAt(0))) && 
+                            Character.isNumeric((lastResult.charAt(lastResult.length() - 1)))) {   
+                             return STACK.pop(lastResult);  
+                                }
+
+                    return false; }
                     System.out.println(lastResult);
                     break;
                 case "3":   // Salir del programa
