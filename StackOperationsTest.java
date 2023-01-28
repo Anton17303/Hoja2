@@ -15,12 +15,15 @@ class StackOperationsTest {
 	 * Este método prueba los métodos push y peek
 	 */
 	void PeekandPushMethodtest() {
-		this.sv.push(4);
-		int expectedvalue = 4;
-		Assert.assertEquals(expectedvalue, this.sv.peek());
+		this.sv.push(4); //Se agrega un valor al stack
+		int expectedvalue = 4; //Se agrega el valor esperado
+		Assert.assertEquals(expectedvalue, this.sv.peek()); //Se hace la prueba
 	}
 	
 	@Test
+	/**
+	 * Este método prueba el método pop
+	 */
 	void popTest() {
 		this.sv.push(300);
 		int expected = 300;
