@@ -1,7 +1,15 @@
 import java.io.File;
 import java.util.Scanner;
-
+/**
+ * 
+ * @author Jose Anton, Alejandro Ortega, Pedro Pablo Guzmán
+ * @version 1.0.0
+ */
 public class Main {
+	/**
+	 * En este método se encuentra
+	 * @param args un array de strings que puede ser usado para el método
+	 */
     public static void main(String[] args) {
 
         ICalculator calculator = new Calculator();

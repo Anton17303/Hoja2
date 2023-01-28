@@ -2,7 +2,7 @@ import java.util.ArrayList;
 /**
  * 
  * @author José Anton, Alejandro Ortega, Pedro Pablo Guzmán
- *
+ * @version 1.0.0
  */
 public class Calculator implements ICalculator {
 
@@ -20,7 +20,7 @@ public class Calculator implements ICalculator {
     	//pre: expression es un string el cuál representa una expresión aritmetica en notación postfiz
     	//post: se devuelve el resultado de la operación postfix ingresada, si hay una operación no válida se retornara un valor negativo
     	try {
-    		if (!expression.contains("+") || !expression.contains("-") || !expression.contains("*") || !expression.contains("/")) { //Evaluar si hay operadores en la expresión
+    		if (!expression.contains("+") && !expression.contains("-") && !expression.contains("*") && !expression.contains("/")) { //Evaluar si hay operadores en la expresión
     			throw new ArithmeticException("No hay operadores");
     		}
     		Stack<Double> stack = new StackVector<Double>(); //esta variable almacena el stack que se usará para realizar las operaciones

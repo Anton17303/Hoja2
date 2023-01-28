@@ -19,6 +19,18 @@ class CalculatorTest {
 		Double expected = 30.0;
 		assertEquals(expected, res);
 	}
+	@Test
+	/**
+	 * Este método prueba el método get previous de calculadora
+	 */
+	void lastResultTest() {
+		Calculator calc = new Calculator();
+		String expresion = "6 2 3 + *";
+		calc.evaluate(expresion);
+		Double last = calc.getPrevious();
+		Double expected = 30.0;
+		assertEquals(expected, last);
+	}
 	
 
 }
