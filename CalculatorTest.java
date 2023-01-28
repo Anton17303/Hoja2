@@ -10,7 +10,7 @@ class CalculatorTest {
 		Double res = calc.evaluate("6 2 3 + *");
 		Double expected = 30.0;
 		assertEquals(expected, res);
-		System.out.println(calc.evaluate("6 2 3 + *"));
 	}
+	
 
 }
