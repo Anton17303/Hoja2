@@ -69,7 +69,7 @@ public class Calculator implements ICalculator {
 			res = this.lastResult; //Guardar el valor de last result
 		}
 		else {
-			res = -1.0; //Devolver un valor negativo
+			throw new NullPointerException("No se realizaron operaciones"); //Devolver un valor negativo
 		}
 		return res; //Devolver la variable
 		

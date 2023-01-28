@@ -31,6 +31,6 @@ class CalculatorTest {
 		Double expected = 30.0;
 		assertEquals(expected, last);
 	}
-	
+
 
 }
